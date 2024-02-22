@@ -1,20 +1,16 @@
 #include <iostream>
 #include <math.h>
-using namespace std; 
-string s; 
-int main() { 
-    iosbase::syncwith_stdio(false); 
-    cin.tie();cout.tie(); 
-    long long tam; 
-    cin>>s; 
-    long long r=s.length()-1; 
-    for(long long i=r;i>=0;i--) { 
-        if(s[i]!='0') {
-            tam=i;
-            break;
-        } 
-    } for(long long i=tam;i>=0;i--) { 
-        cout<<s[i]; 
-        } 
-    return 0; 
+using namespace std;
+
+typedef long long ll;
+typedef double long db;
+typedef string str;
+
+int main()
+{
+ios_base :: sync_with_stdio(0); cin.tie(0); cout.tie(0) ;
+ #ifndef ONLINE_JUDGE
+   freopen("main.inp", "r", stdin);
+   freopen("main.out", "w", stdout);
+#endif
 }
