@@ -8,3 +8,4 @@ timUOC.exe
 build/Debug/timUOC.o
 .gitignore
 rutgonPSO.exe
+timSNT.cpp
