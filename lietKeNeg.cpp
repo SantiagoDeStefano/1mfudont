@@ -13,7 +13,7 @@ void solve() {
     do {
         cin >> a[n];
         n++;
-    } while(a[n-1] != 0);
+    } while(a[n-1] != 0); //Vi cuoi mang luon la so 0
     int cnt = 0;
     for(int i = 0; i < n; i++) {
         if(a[i] < 0) {
