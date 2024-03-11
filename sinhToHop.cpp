@@ -7,6 +7,7 @@ typedef string str;
 const ll NMAX = 1e6;
 const ll lim = 1e18;
 ll a[NMAX + 10];
+int mark[20];
 
 int n, k;
 vector <int> curSubset;
@@ -19,19 +20,16 @@ void printSubset()
 
 void genSubset(int pos)
 {
-    int lastNum;
-    if(curSubset.empty()) {
-        lastNum = 0;
-    } else {
-        lastNum = curSubset.back();
-    }
-    for(int i = lastNum + 1; i <= n; i++) {
+    int lastNum = (curSubset.empty() ? 0 : curSubset.back());  //số cuối cùng được chọn
+    for (int i = 1; i <= n; i ++)
+    {
         curSubset.push_back(i);
-        if(curSubset.size() == k) printSubset();
-        else genSubset(pos+1);
+        if (curSubset.size() == k) printSubset();
+        else genSubset(pos + 1);
         curSubset.pop_back();
     }
 }
+
 
 int main()
 {
